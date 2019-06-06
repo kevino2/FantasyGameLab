@@ -1,6 +1,6 @@
 package players;
 
-import players.weapons.IWeapon;
+import weapons.IWeapon;
 
 public class Barbarian extends Players {
 

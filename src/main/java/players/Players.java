@@ -1,11 +1,12 @@
 package players;
 
+import shared.IAttack;
 import treasure.ITreasure;
 import treasure.Treasure;
 
 import java.util.ArrayList;
 
-public abstract class Players {
+public abstract class Players implements IAttack {
     private String name;
     private int health;
     private ArrayList <ITreasure> backpack;
@@ -34,6 +35,10 @@ public abstract class Players {
 
     public int backpackCount() {
         return this.backpack.size();
+    }
+
+    public void takeDamage(int damage) {
+        this.health -= damage;
     }
 
 }
